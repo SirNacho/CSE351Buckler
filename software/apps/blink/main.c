@@ -39,6 +39,8 @@ int main(void) {
     APP_ERROR_CHECK(error_code);
   }
 
+	//Link to Video of LED Pattern: https://depauledu-my.sharepoint.com/:v:/g/personal/sfraust1_depaul_edu/EeJwJ9V5kLtIsoWzOwmCQwsBmxTDw0yVTc18QM8WJYIeGw?e=5pL3iC
+	
   int numArray[] = {9,5,4};
   
   printf("The 1st element of the array is %p\nThe 2nd element of the array is %p\nThe 3rd element of the array is %p\n\n", &numArray[0], & numArray[1], &numArray[2]);
