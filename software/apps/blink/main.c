@@ -38,12 +38,31 @@ int main(void) {
     error_code = nrfx_gpiote_out_init(LEDS[i], &out_config);
     APP_ERROR_CHECK(error_code);
   }
+
+  int numArray[] = {9,5,4};
+  
+  printf("The 1st element of the array is %p\nThe 2nd element of the array is %p\nThe 3rd element of the array is %p\n\n", &numArray[0], & numArray[1], &numArray[2]);
+
   // loop forever
   while (1) {
-    for (int i=2; i>-1; i--) {
+    /*for (int i=2; i>-1; i--) {
       nrf_gpio_pin_toggle(LEDS[i]);
       nrf_delay_ms(500);
-    }
+    }*/
+	for (int i=2; i>-1; i--) {
+		if (i % 2 == 0) {
+
+			//nrf_gpio_pin_toggle(LEDS[0]);
+		  nrf_gpio_pin_toggle(LEDS[1]);
+			nrf_gpio_pin_toggle(LEDS[2]);
+			nrf_delay_ms(500);
+		  }
+		else {
+			//nrf_gpio_pin_toggle(LEDS[0]);
+			nrf_gpio_pin_toggle(LEDS[1]);
+			nrf_gpio_pin_toggle(LEDS[2]);
+			nrf_delay_ms(1000);
+		  }
+	  }
   }
 }
-
